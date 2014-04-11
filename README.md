@@ -10,9 +10,27 @@ The implementation has been developed and tested for ns-3 version 3.14.1 (3.15).
 
 How to install:
 
-You have to get and install an ns-3 version first. Then, go to the ns-3 folder
+1. Install boost library:
+wget http://downloads.sourceforge.net/project/boost/boost/1.53.0/boost_1_53_0.tar.bz2
+tar jxf boost_1_53_0.tar.bz2
+cd boost_1_53_0
+./bootstrap.sh
+sudo ./b2 --prefix=/usr/local install
 
+2. Clone the repositories:
+git clone git://github.com/cawka/ns-3-dev-ndnSIM.git ns-3
 git clone git@github.com:Be1thaz0r/HoBHIS.git ns-3/src/ndnSIM
+
+3. Compile the code:
+cd ns-3/
+git checkout ns-3.17-ndnSIM-0.5
+./waf configure --boost-includes=/usr/local/include --boost-libs=/usr/local/lib --enable-examples --disable-python
+./waf
+
+4. Run tests. For instance:
+./waf --run hobhis-baseline-const-rtt
+
+You can find more examples and results in ndnSIM/examples folder.
 
 This release includes:
 
@@ -33,4 +51,3 @@ NB standard ns3 tracing is not tested yet
 
 Please, do not hesitate to contact me in case of any problem/question or some suggestions: Natalya Rozhnova <natalya.rozhnova (at) lip6.fr>
 
-You can find more examples and results in ndnSIM/examples folder.
