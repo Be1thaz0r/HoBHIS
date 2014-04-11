@@ -10,17 +10,12 @@ The implementation has been developed and tested for ns-3 version 3.14.1 (3.15).
 
 How to install:
 
-1. Install boost library:
-
-wget http://downloads.sourceforge.net/project/boost/boost/1.53.0/boost_1_53_0.tar.bz2
-
-tar jxf boost_1_53_0.tar.bz2
-
-cd boost_1_53_0
-
-./bootstrap.sh
-
-sudo ./b2 --prefix=/usr/local install
+1. Install boost library: \n
+wget http://downloads.sourceforge.net/project/boost/boost/1.53.0/boost_1_53_0.tar.bz2 \n
+tar jxf boost_1_53_0.tar.bz2 \n
+cd boost_1_53_0 \n
+./bootstrap.sh \n
+sudo ./b2 --prefix=/usr/local install \n
 
 2. Clone the repositories:
 
