@@ -12,27 +12,35 @@ How to install:
 
 1. Install boost library:
 
-wget http://downloads.sourceforge.net/project/boost/boost/1.53.0/boost_1_53_0.tar.bz2
-tar jxf boost_1_53_0.tar.bz2
-cd boost_1_53_0
-./bootstrap.sh
-sudo ./b2 --prefix=/usr/local install
+1.1 wget http://downloads.sourceforge.net/project/boost/boost/1.53.0/boost_1_53_0.tar.bz2
+
+1.2 tar jxf boost_1_53_0.tar.bz2
+
+1.3 cd boost_1_53_0
+
+1.4 ./bootstrap.sh
+
+1.5 sudo ./b2 --prefix=/usr/local install
 
 2. Clone the repositories:
 
-git clone git://github.com/cawka/ns-3-dev-ndnSIM.git ns-3
-git clone git@github.com:Be1thaz0r/HoBHIS.git ns-3/src/ndnSIM
+2.1 git clone git://github.com/cawka/ns-3-dev-ndnSIM.git ns-3
+
+2.2 git clone git@github.com:Be1thaz0r/HoBHIS.git ns-3/src/ndnSIM
 
 3. Compile the code:
 
-cd ns-3/
-git checkout ns-3.17-ndnSIM-0.5
-./waf configure --enable-examples --disable-python
-./waf
+3.1 cd ns-3/
+
+3.2 git checkout ns-3.17-ndnSIM-0.5
+
+3.3 ./waf configure --enable-examples --disable-python
+
+3.4 ./waf
 
 4. Run tests. For instance:
 
-./waf --run hobhis-baseline-const-rtt
+4.1 ./waf --run hobhis-baseline-const-rtt
 
 You can find more examples and results in ndnSIM/examples folder.
 
