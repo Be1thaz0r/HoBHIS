@@ -56,4 +56,4 @@ This release includes:
 
 NB standard ns3 tracing is not tested yet
 
-Please, do not hesitate to contact me in case of any problem/question or some suggestions: Natalya Rozhnova <natalya.rozhnova (at) lip6.fr>
+Please, do not hesitate to contact me in case of any problem/question or some suggestions: Natalya Rozhnova: natalya.rozhnova (at) lip6.fr
