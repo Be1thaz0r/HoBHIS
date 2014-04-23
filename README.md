@@ -42,18 +42,6 @@ This release includes:
 
 	1.3) random generation of the response delay by server
 
-2) Interest rate control (Tolerance mechanism)
-
-	2.1) mono-conversation
-
-	2.2) multi-conversation
-
-	2.3) client reaction on control packets (at this moment it is supported by consumer-cbr only)
-
-3) Optional:
-
-	3.1) Dynamic adjustment of the design parameter (at this moment it is supported for mono-conversation scenario)
-
 NB standard ns3 tracing is not tested yet
 
 Please, do not hesitate to contact me in case of any problem/question or some suggestions: Natalya Rozhnova: natalya.rozhnova (at) lip6.fr
