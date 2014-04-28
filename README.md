@@ -12,24 +12,23 @@ How to install:
 
 1) Clone the repositories:
 
-	1.1) git clone git://github.com/cawka/ns-3-dev-ndnSIM.git ns-3
-
-	1.2) git clone git@github.com:Be1thaz0r/HoBHIS.git ns-3/src/ndnSIM
+	1.1) mkdir HoBHIS
+	1.2) cd HoBHIS
+	1.3) git clone git@github.com:Be1thaz0r/HoBHIS.git .
 
 2) Compile the code:
 
-	2.1) cd ns-3/
+	2.1) cd HoBHIS/ns-3/
 
-	2.2) git checkout ns-3.17-ndnSIM-0.5
+	2.2) ./waf configure --enable-examples --disable-python
 
-	2.3) ./waf configure --enable-examples --disable-python
-
-	2.4) ./waf
+	2.3) ./waf
 
 3) Run tests. For instance:
 
-	3.1) ./waf --run hobhis-baseline-const-rtt
+	3.1) ./waf --run hobhis-chain
 
+See ndnSIM/examples/HowTo.txt for more details.
 You can find more examples and results in ndnSIM/examples folder.
 
 This release includes:
