@@ -1,0 +1,50 @@
+# -*- Mode: python; py-indent-offset: 4; indent-tabs-mode: nil; coding: utf-8; -*-
+
+def build(bld):
+    obj = bld.create_ns3_program('ndn-simple', ['ndnSIM'])
+    obj.source = 'ndn-simple.cc'
+
+    obj = bld.create_ns3_program('ndn-grid', ['ndnSIM', 'point-to-point-layout'])
+    obj.source = 'ndn-grid.cc'
+    
+    obj = bld.create_ns3_program('ndn-zipf-mandelbrot', ['ndnSIM', 'point-to-point-layout'])
+    obj.source = 'ndn-zipf-mandelbrot.cc'
+    
+
+    obj = bld.create_ns3_program('ndn-simple-with-content-freshness', ['ndnSIM'])
+    obj.source = ['ndn-simple-with-content-freshness.cc',
+                  'custom-apps/dumb-requester.cc']
+
+    obj = bld.create_ns3_program('ndn-simple-with-custom-app', ['ndnSIM'])
+    obj.source = ['ndn-simple-with-custom-app.cc',
+                  'custom-apps/custom-app.cc',
+                  'custom-apps/hijacker.cc']
+
+    if 'topology' in bld.env['NDN_plugins']:
+        obj = bld.create_ns3_program('ndn-grid-topo-plugin', ['ndnSIM'])
+        obj.source = 'ndn-grid-topo-plugin.cc'
+
+        obj = bld.create_ns3_program('ndn-congestion-topo-plugin', ['ndnSIM'])
+        obj.source = 'ndn-congestion-topo-plugin.cc'
+
+        obj = bld.create_ns3_program('ndn-congestion-alt-topo-plugin', ['ndnSIM'])
+        obj.source = [
+            'custom-strategies/custom-strategy.cc',
+            'ndn-congestion-alt-topo-plugin.cc'
+            ]
+            
+        obj = bld.create_ns3_program('ndn-tree-tracers', ['ndnSIM'])
+        obj.source = 'ndn-tree-tracers.cc'
+
+        obj = bld.create_ns3_program('ndn-tree-cs-tracers', ['ndnSIM'])
+        obj.source = 'ndn-tree-cs-tracers.cc'
+
+        obj = bld.create_ns3_program('ndn-tree-app-delay-tracer', ['ndnSIM'])
+        obj.source = 'ndn-tree-app-delay-tracer.cc'
+
+        obj = bld.create_ns3_program('hobhis-chain', ['ndnSIM'])
+        obj.source = 'hobhis-chain.cc'
+        
+        obj = bld.create_ns3_program('hobhis-fairness', ['ndnSIM'])
+        obj.source = 'hobhis-fairness.cc'
+        

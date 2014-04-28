@@ -1,0 +1,16 @@
+You can find some example scripts of HoBHIS in files: hobhis-chain.cc and hobhis-fairness.cc
+
+You can run the scripts with different parameters. To see the possible configurations ask the script for help in the following way:
+
+./waf --run "hobhis-chain --PrintHelp"
+./waf --run "hobhis-fairness --PrintHelp"
+
+Example:
+
+To run the script hobhis-chain with queue tracing you can do as follows:
+
+./waf --run "hobhis-chain --wfp=1"
+
+By default:
+The response delay is constant
+No tracing
