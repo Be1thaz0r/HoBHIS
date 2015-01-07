@@ -10,23 +10,40 @@ The implementation has been developed and tested for ns-3 version 3.14.1 (3.15).
 
 How to install:
 
+0) Prerequisites install the appropriate packages. Example debian:
+	
+	aptitude install g++ libboost-dev-all ...
+
+Compile ns3
+
+
 1) Clone the repositories:
 
-	1.1) mkdir HoBHIS
-	1.2) cd HoBHIS
-	1.3) git clone git@github.com:Be1thaz0r/HoBHIS.git .
+	mkdir HoBHIS
+	cd HoBHIS
+	git clone git@github.com:Be1thaz0r/HoBHIS.git .
 
 2) Compile the code:
 
-	2.1) cd HoBHIS/ns-3/
+	cd HoBHIS/ns-3/
+	./waf configure --enable-examples --disable-python
+	./waf
 
-	2.2) ./waf configure --enable-examples --disable-python
+If the module ndnSIM is not built check for the paths to the boost libraries.
+This issue typically occurs on Debian 64 since waf is unable to locate them.
+A workaround consists in running instead in specifying the boost include and boost lib directories.
 
-	2.3) ./waf
+	./waf configure --boost-includes=/path/to/boost/includes --boost-lib=/path/to/boost/libs --enable-examples --disable-python
+	./waf
+
+Example: under Debian x64:
+
+	./waf configure --boost-lib=/usr/lib/x86_64-linux-gnu --enable-examples --disable-python
+	./waf
 
 3) Run tests. For instance:
 
-	3.1) ./waf --run hobhis-chain
+	./waf --run hobhis-chain
 
 See ndnSIM/examples/HowTo.txt for more details.
 You can find more examples and results in ndnSIM/examples folder.

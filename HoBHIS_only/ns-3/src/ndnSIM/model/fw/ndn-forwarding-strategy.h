@@ -28,7 +28,6 @@
 #include "ns3/object.h"
 #include "ns3/traced-callback.h"
 #include "ns3/ndn-name.h"
-#include "ns3/ndn_interest_rate_control_entry.h"
 
 namespace ns3 {
 namespace ndn {
