@@ -14,9 +14,6 @@ How to install:
 	
 	aptitude install g++ libboost-dev-all ...
 
-Compile ns3
-
-
 1) Clone the repositories:
 
 	mkdir HoBHIS
@@ -28,6 +25,8 @@ Compile ns3
 	cd HoBHIS/ns-3/
 	./waf configure --enable-examples --disable-python
 	./waf
+
+If the compilation fails due to warnings, please remove the option [-Werror] from waf-tools/cflags.py
 
 If the module ndnSIM is not built check for the paths to the boost libraries.
 This issue typically occurs on Debian 64 since waf is unable to locate them.
