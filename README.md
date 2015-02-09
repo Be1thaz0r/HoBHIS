@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 HoBHISjj
+=======
+HoBHIS哈哈哈
+>>>>>>> branch 'test' of https://github.com/HOBHIS/HoBHIS.git
 ======
 HHOHOHO
 我也不知道
